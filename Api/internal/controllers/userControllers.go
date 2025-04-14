@@ -8,7 +8,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func AllUser(c *gin.Context) {
+func Usuarios(c *gin.Context) {
 	// Mostra todos os usuarios
 	var u []models.User
 	database.DB.Find(&u)

@@ -17,7 +17,7 @@ var (
 )
 
 func ConnectDatabase() error {
-	err = godotenv.Load("../../.env")
+	err = godotenv.Load()
 
 	if err != nil {
 		log.Fatal("Erro ao carregar o arquivo .env")
@@ -42,7 +42,7 @@ func ConnectDatabase() error {
 
 	fmt.Println("Conexao bem sucedida com o banco de dados")
 
-	DB.AutoMigrate(&models.User{})
+	DB.AutoMigrate(&models.User{}, &models.Contrato{})
 	return nil
 
 }

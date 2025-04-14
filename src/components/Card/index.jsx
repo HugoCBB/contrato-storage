@@ -1,6 +1,8 @@
-import "./Contrato.css"
 
-export default function Contratos() {
+import "./Card.css"
+
+export default function Card({nome, cpf, data}) {
+
     return (
         <div className="Contrato_container">
             <h2>
@@ -11,13 +13,14 @@ export default function Contratos() {
 
             <div className="Contrato_card">
                 <div className="Contrato_info">
+                    
                     <span>
                         <strong>
-                            Hugo Carlos Barbosa Brandao
+                            {nome}
                         </strong>
                     </span>
-                    <span>08709200576</span>
-                    <span>28/02/2023</span>
+                    <span>{cpf}</span>
+                    <span>{data}</span>
                     <a href="/">Visualizar contrato</a>
                 </div>
             </div>

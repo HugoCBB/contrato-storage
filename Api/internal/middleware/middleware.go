@@ -13,10 +13,11 @@ func ContentTypeMiddleware() gin.HandlerFunc {
 }
 
 func CorsMiddleware() gin.HandlerFunc {
+
 	return cors.New(cors.Config{
-		AllowAllOrigins:  true,
+		AllowOrigins:     []string{"http://localhost:5173"},
 		AllowMethods:     []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
-		AllowHeaders:     []string{"*"},
+		AllowHeaders:     []string{"Content-Type", "Authorization"},
 		AllowCredentials: true,
 	})
 }

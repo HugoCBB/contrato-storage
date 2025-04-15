@@ -12,7 +12,7 @@ export default function Home() {
 
     const getContratos = async () =>{
         try {
-            const response = await api.get("/contrato", {
+            const response = await api.get("/contrato/", {
                 withCredentials: true,
             })
             setContratos(response.data)
@@ -36,23 +36,24 @@ export default function Home() {
             
             <input
             type="text"
-            placeholder="Pesquisar com CPF ou nome"
+            placeholder="Digite o nome ou cpf"
             className="search-input"
             />
             
         </div>
 
         <div className="tables">
+        <h2 style={{justifyContent:"center", textAlign:"center"}}>Contratos</h2>
             {contratos.map(contrato => (
                 <Card
                 key={contrato.cpf}
                 nome = {contrato.nome}
                 cpf = {contrato.cpf}
-                data = {contrato.data}
+                data = {contrato.data_criacao}
 
                 />
-                
-            ))}
+                ))}
+            <Card/>
         </div>
         </main>
     </section>

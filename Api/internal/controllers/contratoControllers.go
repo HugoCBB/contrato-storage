@@ -25,9 +25,10 @@ func AdicionarContrato(c *gin.Context) {
 		return
 
 	}
-	t.Data_criacao = time.Now()
+	t.Data_criacao = time.Now().Format("01/02/2006")
 	database.DB.Create(&t)
-	c.JSON(http.StatusOK, t)
+
+	c.JSON(http.StatusOK, &t)
 
 }
 

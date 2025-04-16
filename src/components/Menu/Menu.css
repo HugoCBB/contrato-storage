@@ -1,0 +1,64 @@
+/* Estilos gerais */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Botão de abrir o menu */
+  .menu-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+    background-color: #111;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  /* menu */
+  .menu {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Escondido inicialmente */
+    width: 250px;
+    height: 100%;
+    background-color: #222;
+    color: white;
+    padding-top: 60px;
+    transition: left 0.3s ease;
+    z-index: 1;
+  }
+  
+  .menu.open {
+    left: 0;
+  }
+  
+  .menu ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .menu ul li {
+    padding: 15px 20px;
+    border-bottom: 1px solid #444;
+  }
+  
+  .menu ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    color: white;
+    font-size: 25px;
+    border: none;
+    cursor: pointer;
+  }
+  

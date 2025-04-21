@@ -32,8 +32,8 @@ export default function Home() {
     
     <section  >
 
-        <Menu/>
         <section className="home">
+        <Menu/>
             <main className="content">
             <div className="top-bar">
                 <button className="add-btn">Adicionar</button>
